@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.env
+venv/
+*.env
+
+# Jupyter
+.ipynb_checkpoints
+
+# VSCode
+.vscode/
+
+# Logs
+*.log
+
+# MLflow
+mlruns/
+
+# Local data
+data/
+!data/.gitignore
+
+# Docker
+*.tar
+*.img
+.dockerignore
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars
+
+# AWS
+*.pem
+.aws/
+
+# OS files
+.DS_Store
+Thumbs.db
