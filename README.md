@@ -9,7 +9,7 @@ customer-feedback-analysis/
 │   └── requirements.txt
 │
 ├── data/
-│   ├── .gitignore                 # Ignores raw/processed data
+│   ├── .gitignore
 │   ├── raw/
 │   ├── processed/
 │   └── external/
@@ -28,7 +28,7 @@ customer-feedback-analysis/
 │   └── ingress.yaml
 │
 ├── mlruns/
-│   └── .gitignore                # Ignores MLflow runs
+│   └── .gitignore
 │
 ├── notebooks/
 │   └── eda_analysis.ipynb
