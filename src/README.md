@@ -7,6 +7,4 @@
     d. **Create Usefull Features**   
     e. **Clean Text**  
     f. **Label Encoding**   
-    g. **Feature Engineering(TF-IDF)**  
-    h. **Handle Imbalance**   
-    i. **Save Preprocessed Data**  
+    g. **Save Preprocessed Data**  
