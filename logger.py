@@ -7,14 +7,14 @@ log_base_dir = "logs"
 timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
 log_dir = os.path.join(log_base_dir, timestamp)
 
-os.makedirs(log_dir, exist_ok=True)  # Ensure the directory exists
+os.makedirs(log_dir, exist_ok=True) 
 
 def get_logger(log_name):
     """
     Creates a logger that logs to a file inside a time-stamped directory.
     Ensures handlers are correctly set up and disables propagation to avoid duplicate logs.
     """
-    log_filename = os.path.join(log_dir, f"{log_name}.log")  # Log file without timestamp
+    log_filename = os.path.join(log_dir, f"{log_name}.log") 
 
     logger = logging.getLogger(log_name)
     logger.setLevel(logging.INFO)
@@ -24,7 +24,7 @@ def get_logger(log_name):
         logger.handlers.clear()
 
     # File handler
-    file_handler = logging.FileHandler(log_filename, mode='a')  # Append mode
+    file_handler = logging.FileHandler(log_filename, mode='a') 
     formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s", datefmt='%Y-%m-%d %H:%M:%S')
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
