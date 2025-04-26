@@ -45,8 +45,11 @@ def preprocess_dataframe(df):
     df["Cleaned_Text"] = df["Text"].apply(clean_text)
     df["Cleaned_Summary"] = df["Summary"].apply(clean_text)
 
-    # Encode sentiment
-    logger.info("Encoding Sentiment") 
+    df["Cleaned_Text"] = df["Cleaned_Text"].fillna("")
+    df["Cleaned_Summary"] = df["Cleaned_Summary"].fillna("")
+
+    # Encode sentiment 
+    logger.info("Encoding Sentiment (1, 2) - Negative(0), (3) - Neutral(1), (4, 5) - Positive(2)") 
     df["Sentiment"] = df["Score"].apply(lambda x: 0 if x <= 2 else 1 if x == 3 else 2)
 
     return df
