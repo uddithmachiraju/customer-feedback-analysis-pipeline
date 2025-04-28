@@ -3,16 +3,11 @@
 customer-feedback-analysis/
 │
 ├── api/
-│   ├── __init__.py
 │   ├── app.py
-│   ├── model_loader.py
-│   └── requirements.txt
 │
 ├── data/
-│   ├── .gitignore
 │   ├── raw/
 │   ├── processed/
-│   └── external/
 │
 ├── docker/
 │   ├── Dockerfile
@@ -34,12 +29,6 @@ customer-feedback-analysis/
 │   ├── preprocessing.py
 │   ├── train.py
 │   └── predict.py
-│
-├── terraform/
-│   ├── main.tf
-│   ├── provider.tf
-│   ├── variables.tf
-│   └── outputs.tf
 │
 ├── tests/
 │   ├── __init__.py
