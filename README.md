@@ -22,21 +22,8 @@ customer-feedback-analysis/
 ├── jenkins/
 │   └── Jenkinsfile
 │
-├── k8s/
-│   ├── deployment.yaml
-│   ├── service.yaml
-│   └── ingress.yaml
-│
-├── mlruns/
-│   └── .gitignore
-│
 ├── notebooks/
 │   └── eda_analysis.ipynb
-│
-├── scripts/
-│   ├── __init__.py
-│   ├── retrain.sh
-│   └── monitor.sh
 │
 ├── src/
 │   ├── __init__.py

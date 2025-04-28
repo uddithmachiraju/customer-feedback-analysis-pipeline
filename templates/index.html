@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            text-align: center;
+            padding: 50px;
+        }
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+            display: inline-block;
+            min-width: 400px;
+        }
+        textarea {
+            width: 300px;
+            height: 100px;
+            padding: 10px;
+            margin: 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            resize: none;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .prediction {
+            font-size: 1.6em;
+            font-weight: bold;
+            margin-top: 30px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+
+        {% if prediction %}
+            <div class="prediction">{{ prediction }}</div>
+        {% else %}
+            <h1>customer-feedback-analysis-pipeline</h1>
+            <form method="POST">
+                <textarea name="text" placeholder="Enter your text here..." required></textarea><br>
+                <input type="submit" value="Predict">
+            </form>
+        {% endif %}
+
+    </div>
+
+</body>
+</html>
