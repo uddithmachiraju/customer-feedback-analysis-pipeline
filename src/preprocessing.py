@@ -1,6 +1,7 @@
 import re
 import nltk
 import string
+import joblib 
 import pandas as pd
 from logger import get_logger
 from nltk.corpus import stopwords
@@ -9,7 +10,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from tqdm import tqdm
 from src.data_ingestion import load_data
-from src.config import raw_data_path, preprocessed_data_path, train_path, eval_path, test_path
+from src.config import raw_data_path, preprocessed_data_path, train_path, eval_path, test_path, vectorizer_saving_path
 
 # Download NLTK resources
 nltk.download('wordnet')
@@ -70,6 +71,9 @@ def split_and_vectorize(df):
     X_train_vectorized = vectorizer.fit_transform(X_train)
     X_eval_vectorized = vectorizer.transform(X_eval)
     X_test_vectorized = vectorizer.transform(X_test)
+    
+    joblib.dump(vectorizer, vectorizer_saving_path)
+    logger.info(f"Saved Vectorizer in {vectorizer_saving_path}") 
 
     return (X_train_vectorized, y_train), (X_eval_vectorized, y_eval), (X_test_vectorized, y_test), vectorizer
 
