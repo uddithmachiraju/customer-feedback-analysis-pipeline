@@ -1,13 +1,19 @@
 from flask import Flask, request, render_template
 import joblib
+from logger import get_logger
 from src.preprocessing import clean_text
 from src.config import model_saving_path, vectorizer_saving_path
 
+logger = get_logger("api")
+
 app = Flask(__name__, template_folder = "../templates")
+logger.info("Initilized API endpoint")
 
 # Load model and vectorizer
 model = joblib.load(model_saving_path)
+logger.info(f"Loaded pretrained model from {model_saving_path}") 
 vectorizer = joblib.load(vectorizer_saving_path) 
+logger.info(f"loaded pretrained vectorizer from {vectorizer_saving_path}") 
 
 @app.route("/", methods=["GET", "POST"])
 def home():
