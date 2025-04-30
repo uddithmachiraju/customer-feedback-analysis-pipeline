@@ -16,5 +16,5 @@ EXPOSE 5000
 
 
 # use:
-#   1. docker build -t sentiment-app 
-#   2. docker run -p 5000:5000 sentiment-app  
+#   1. docker build -t sentiment-pipeline -f docker/Dockerfile .
+#   2. docker run -p 5000:5000 -v "$(pwd)/data:/app/data" sentiment-pipeline

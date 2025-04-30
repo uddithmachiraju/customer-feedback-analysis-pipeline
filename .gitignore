@@ -27,7 +27,6 @@ data/
 # Docker
 *.tar
 *.img
-.dockerignore
 
 # Terraform
 *.tfstate
