@@ -14,7 +14,9 @@ COPY . .
 # Expose Port for flask 
 EXPOSE 5000 
 
+# Run the Flask API 
+CMD ["python", "-m", "api.app"] 
 
 # use:
 #   1. docker build -t sentiment-pipeline -f docker/Dockerfile .
-#   2. docker run -p 5000:5000 -v "$(pwd)/data:/app/data" sentiment-pipeline
+#   2. docker run -p 5000:5000 -v ${PWD}\data:/app/data sentiment-pipeline

@@ -15,7 +15,6 @@ data/
 
 # Ignore logs and models (if not needed in image)
 logs/
-models/
 
 # OS-specific files
 .DS_Store
