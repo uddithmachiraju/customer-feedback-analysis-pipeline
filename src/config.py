@@ -16,3 +16,5 @@ eval_path.parent.mkdir(parents = True, exist_ok = True)
 test_path.parent.mkdir(parents = True, exist_ok = True)
 model_saving_path.parent.mkdir(parents = True, exist_ok = True)
 vectorizer_saving_path.parent.mkdir(parents = True, exist_ok = True) 
+
+g_drive_link = "1a05UwEeg1_vAZojx0eBAE_4qX4Fs9vYY"

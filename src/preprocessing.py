@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from tqdm import tqdm
 from src.data_ingestion import load_data
-from src.config import raw_data_path, preprocessed_data_path, train_path, eval_path, test_path, vectorizer_saving_path
+from src.config import raw_data_path, preprocessed_data_path, train_path, eval_path, test_path, vectorizer_saving_path, g_drive_link
 
 # Download NLTK resources
 nltk.download('wordnet')
@@ -94,7 +94,7 @@ def save_split_data(X_train, y_train, X_eval, y_eval, X_test, y_test):
     logger.info("Saved Train, Eval, and Test datasets successfully")
 
 def main():
-    df = load_data(path = raw_data_path)
+    df = load_data(path = g_drive_link, use_drive = True)
     df = preprocess_dataframe(df)
     df.to_csv(preprocessed_data_path, index = False)
     logger.info("Saved the preprocessed data")
